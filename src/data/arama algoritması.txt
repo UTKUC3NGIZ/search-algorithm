@@ -1,0 +1,88 @@
+Bu Case'de bir arama algoritması geliştirmeniz beklenmektedir.
+
+clean code mantıında gereksiz  ve performans düşürücü ekstra işlemlerden arındırarak işlevine uygun bir algoritma yazmanız beklenmektedir.
+
+Arama yapılırken veriler anlık olarak inputa veriler girildiği an değerlendirme sağlanarak sonuca bağlı anlık listelenmelidir. inputtaki herhangi bir veri girişi yada çıkışı olduğu an anlık listeler hesaplamalara göre güncellenmeli ve yeni listeler oluşmalıdır.
+
+Genel olarak arama algoritmasının amacı:
+Input ile girilen string verisinin (kelime - cümle - harf - sayı - sembol tüm string ifadeler) veri tabanındaki verilerden en alakalı ve en iyi eşleşme sağladığı veriyi getirmesi gerekmektedir.
+
+Aşağıda belirtilen önceliklere göre bir puanlama ve bu puana göre veri tabanından doğru eşleşmeyi sağlayarak getirme algoritmasını yazmanız beklenmektedir.
+
+aşağıdaki her madde doğru cümleyi bulabilmek için cümlelere puan verecek ve puanı en yüksek olandan en az olana doğru bir sıralama yapmanız beklenmektedir.
+
+###########################################
+
+-> Öncelik Sıralaması
+Inputdan gönderilen ve Veritabanındaki eşleşecek olan cümleler için;
+
+-------------------------------------------
+
+1- ne kadar çok kelime eşleşmiş ise bu 1. öncelik olarka değerlendirilecektir 
+Örnek:
+(input: saç ekimi uzmanı => database: saç ekimi uzmanı randevusu)
+burada 3 kelimenin bire bir eşleşmesi hesaplanarak diğer eşleşmelere göre 2 kelime eşleşene göre sayıca üstün olacağından dolayı en önce bu cümle yakalanmalıdır. 
+ve buna göre diğerlerine göre daha fazla puan almalıdır.
+
+-------------------------------------------
+
+2- bazı kelimeler (ö,ı,ğ,ü,ç,ş) harfleri aynı zamanda (o,i,g,u,c,s) olabiliyor. buna göre kelime içerisinde bu yanlış yazımı ayır edebilecek bir formül bulunması ve buna göre değerlendirilmesi sağlanmalı
+
+-------------------------------------------
+
+3- kullanıcı arama yaparken 1 harfi yanlış yazabilir ya da yerini yanlış belirleyebilir. (saç ekimi => saç ekmi) gibi. burada sistem algoritması kelimelerin ;
+3.1 - kelimedeki harf karakterlerinin sıralaması
+3.2 - kelimedeki harf karakterlerinin benzerlik oranı
+
+bu maddelere bağlı benzerlik yüzdesi vererek benzer olanları yakalamaya çalışan bir algoritma geliştirmelidir.
+
+burada amaç yanlış yazım veya eksik yazımlarda doğru kelimeyi eşleyebilmektir. buna bağlı bir puanlama yapılmalıdır.
+
+not -> bu kelimeleri kıyaslayabilmek için birkaç faktörü değerlendirebilirsiniz.
+- kelimelerin karakter sayıları veya 1 eksik yada 1 fazlasına göre kelimeler birbirlerini değerlendirebilir eşleyebilir.
+- kelimelerdeki harflerin sıralamasındaki uyum ve bu uyuma bir yüzdelik ile ne kadar benzer olduğunu hesaplayabilrisiniz.
+örnek: "selam" => "selma" 
+buna göre 5 harften 3'ü aynı sıralamadadır. %60 sıralama uyumu
+buna göre 5 harften 5'i de aynıdır. %100 harf uyumu
+
+gibi değerlendirerek bu kelimenin yanlış yazılıp yazılmadığını puanlayabilirsiniz.
+
+-------------------------------------------
+
+4- Her cümlenin diğer cümlelere oranla arama yüzdesi olacaktır. Bu arama yüzdesi size verilecek olan fake datada yer alacak ve rasgele belirlenecektir. Buna göre;
+4.1 arama yüzdesi diğerlerine göre yüksek olan kelimeler kullanıcıya listelenirken diğerlerinden önce gelecek ve listede üst sırada olmalıdır.
+
+###########################################
+
+-> Listeleme yaparken nelere dikkat edilmelidir ?
+
+1- Kelimeler yukarıdaki öncelik sıralama değerlendirmesine tabi tutularak puanı en yüksek olandan en az olana doğru sıralanmalıdır.
+
+2- Listeleme yapılırken aşağıda belirtilen bir çıktı beklenmektedir.
+
+| Liste sırası -> 1-2-3-4-5 gibi liste başı nuamrası.
+| girilen input verisi 
+| eşleşen database verisi 
+| eşleşen kelime sayısı
+| varsa inputta yanlış yazılan benzerlik olma ihtimali olan kelime
+| varsa yanlış yazılan verinin database'de eşleştiği kelime 
+| yanlış yazılan kelime ile database de eşleşen kelimenin benzerlik oranı 
+| cümlenin arama yüzdesi 
+| genel puanlamaya etki eden tüm puanlama faktörlerinin isimleri ve puanları (eşleşen kelime puanı: %9.5 | kelime benzerlik puanı: %67) gibi...
+| toplam puan 
+
+yukarıda yazan verilere göre bir çıktı ve liste oluşmalıdır.
+
+Enes Gülcü
++90 553 670 59 97
+
+Not: Anlamadığınız takıldığınız bir noktada soru sorabilir ve bizlerden destek alabilirsiniz arkadaşlar.
+İyi çalışmalar başarılar dilerim...
+  
+
+
+
+
+
+
+

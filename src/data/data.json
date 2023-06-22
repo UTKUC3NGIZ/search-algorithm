@@ -1,0 +1,237 @@
+[
+    {
+      "name": "Rinoplasti (Burun Estetiği)",
+      "subcategories": [
+        "Estetik Rinoplasti",
+        "Burun Kemeri Kırığı Düzeltme",
+        "Burun Ucu Estetiği",
+        "Burun Sırtı Estetiği",
+        "Burun Kanatlarının İnceltilmesi",
+        "Burun Asimetrisinin Düzeltilmesi",
+        "Burun Deliklerinin Küçültülmesi",
+        "Burun Kemerinin İnceltilmesi",
+        "Burun Kemiğinin Kırık veya Eğrilik Düzeltmesi",
+        "Fonksiyonel Rinoplasti",
+        "Septoplasti (Burun Septumu Düzeltme)",
+        "Konka Radyofrekans Ablasyonu (Burun Etleri Tedavisi)",
+        "Tüberinoplasti (Burun Valfi Düzeltme)",
+        "Rekonstrüktif Rinoplasti",
+        "Travmatik Burun Deformitelerinin Düzeltimi",
+        "Tümörün Çıkarılması Sonrası Burun Rekonstrüksiyonu",
+        "Konjenital Burun Anomalilerinin Düzeltimi",
+        "Revizyon Rinoplasti",
+        "Önceki Rinoplasti Sonrası Yetersiz Sonuçların Düzeltimi",
+        "Komplikasyonların Düzeltimi"
+      ]
+    },
+    {
+      "name": "Meme Estetiği",
+      "subcategories": [
+        "Meme Büyütme",
+        "Meme İmplantlarıyla Meme Büyütme",
+        "Yağ Enjeksiyonuyla Meme Büyütme",
+        "Meme Küçültme",
+        "Klasik Meme Küçültme Cerrahisi",
+        "Vertical Scar (Lollipop) Meme Küçültme Cerrahisi",
+        "Meme Dikleştirme",
+        "Mastopeksi",
+        "Klasik Mastopeksi",
+        "Lollipop Mastopeksi",
+        "Anchor (Gemi Yelkeni) Mastopeksi",
+        "Gynecomastia Cerrahisi (Erkeklerde Meme Küçültme)",
+        "Meme Rekonstrüksiyonu",
+        "İmplant ile Meme Rekonstrüksiyonu",
+        "Doku Genişletici ile Meme Rekonstrüksiyonu",
+        "Flep (Doku Transferi) ile Meme Rekonstrüksiyonu",
+        "Meme Asimetrisi Düzeltme",
+        "Areola Estetiği",
+        "Areola Büyütme",
+        "Areola Küçültme",
+        "Areola Rengini Düzeltme",
+        "Sternum (Göğüs Kemiği) Estetiği",
+        "Göğüs Kemiği İçin Cerrahi Düzeltme",
+        "Göğüs Kemiği İçin Filler veya İmplantlar"
+      ]
+    },
+    {
+      "name": "Karın Estetiği",
+      "subcategories": [
+        "Karın Germe (Abdominoplasti)",
+        "Tam Karın Germe",
+        "Mini Karın Germe",
+        "Fleur-de-Lis Karın Germe",
+        "Karın Duvarı Onarımı ile Karın Germe",
+        "Liposuction (Yağ Alma)",
+        "Vaser Liposuction",
+        "Lazer Liposuction",
+        "Ultrasonik Liposuction",
+        "Power-Assisted Liposuction (PAL)",
+        "Karın Kası Onarımı (Diastasis Recti)",
+        "Karın Dolgusu",
+        "Karın Estetiği Revizyonu"
+      ]
+    },
+    {
+      "name": "Yüz Germe (Yüz Asansörü)",
+      "subcategories": [
+        "Alın Germe",
+        "Endoskopik Alın Germe",
+        "Geleneksel Alın Germe",
+        "Kaş Kaldırma",
+        "Göz Kapağı Estetiği (Blefaroplasti)",
+        "Üst Göz Kapağı Estetiği",
+        "Alt Göz Kapağı Estetiği",
+        "Üst ve Alt Göz Kapağı Estetiği",
+        "Yüz ve Boyun Germe",
+        "SMAS Yüz Germe",
+        "Deri Cilt Yüz Germe",
+        "Deri ve SMAS Yüz Germe",
+        "Boyun Germe",
+        "Boyun Liposuctionu",
+        "Boyun Asimetrisi Düzeltme",
+        "Yanak Dolgusu",
+        "Dudak Dolgusu",
+        "Çene Estetiği",
+        "Çene İmplantı",
+        "Çene Dolgusu",
+        "Çene Kemiği Estetiği",
+        "Bıngıldak Estetiği",
+        "Burun Dudak Çizgisi Estetiği",
+        "Yüz Dolgusu",
+        "Hyaluronik Asit Dolguları",
+        "Kolajen Dolguları",
+        "Poli-L-Laktik Asit Dolguları",
+        "Kalsiyum Hidroksiapatit Dolguları"
+      ]
+    },
+    {
+      "name": "Vücut Kontürleme",
+      "subcategories": [
+        "Liposuction (Yağ Alma)",
+        "Vaser Liposuction",
+        "Lazer Liposuction",
+        "Ultrasonik Liposuction",
+        "Power-Assisted Liposuction (PAL)",
+        "Kolların Sıkılaştırılması",
+        "Kol Germe Cerrahisi",
+        "Liposuction ile Kol Sıkılaştırılması",
+        "Uyluk Estetiği",
+        "Uyluk Germe",
+        "Uyluk Liposuctionu",
+        "Popo Estetiği",
+        "Gluteal İmplant",
+        "Gluteal Dolgusu",
+        "Gluteal Germe",
+        "Karın Estetiği",
+        "Karın Germe (Abdominoplasti)",
+        "Liposuction (Yağ Alma)",
+        "Karın Dolgusu",
+        "Karın Estetiği Revizyonu",
+        "Bel Estetiği",
+        "Bel Germe",
+        "Bel Liposuctionu",
+        "Bacak Estetiği",
+        "Bacak Germe",
+        "Bacak Liposuctionu",
+        "Diz Estetiği",
+        "Diz Germe",
+        "Diz Liposuctionu",
+        "Vajina Estetiği",
+        "Labioplasti (Dudak Küçültme)",
+        "Vajina Daraltma",
+        "Vajina Sıkılaştırma"
+      ]
+    },
+    {
+      "name": "Saç Estetiği",
+      "subcategories": [
+        "Saç Ekimi",
+        "FUE Saç Ekimi",
+        "FUT Saç Ekimi",
+        "DHI Saç Ekimi",
+        "Saç PRP Tedavisi",
+        "Saç Mezoterapisi",
+        "Saç Dermapen Tedavisi",
+        "Saç Lazer Terapisi",
+        "Saç Dökülmesi Tedavisi"
+      ]
+    },
+    {
+      "name": "Genital Estetik",
+      "subcategories": [
+        "Vajina Daraltma",
+        "Lazerle Vajina Daraltma",
+        "Cerrahi Vajina Daraltma",
+        "Labioplasti (Dudak Estetiği)",
+        "İç Dudak Estetiği",
+        "Dış Dudak Estetiği",
+        "Klitoral Kapak Estetiği",
+        "Vajinal Rejuvenasyon",
+        "Lazerle Vajinal Rejuvenasyon",
+        "Radyofrekansla Vajinal Rejuvenasyon",
+        "PRP ile Vajinal Rejuvenasyon"
+      ]
+    },
+    {
+      "name": "Diş Estetiği",
+      "subcategories": [
+        "Porselen Laminate Veneer",
+        "Porselen Kron ve Köprü Uygulamaları",
+        "Diş Beyazlatma",
+        "Diş İmplantı",
+        "Diş Dolgusu",
+        "Diş Protezi"
+      ]
+    },
+    {
+      "name": "Cilt Estetiği",
+      "subcategories": [
+        "Botoks Uygulamaları",
+        "Dolgu Uygulamaları",
+        "Kimyasal Peeling",
+        "Lazer Cilt Yenileme",
+        "Cilt Sıkılaştırma",
+        "Lazer Epilasyon",
+        "Leke Tedavileri",
+        "Dermapen ve Mikro iğneleme",
+        "PRP (Platelet Zengin Plazma) Tedavisi",
+        "Mezoterapi",
+        "Tattoo Silme (Dövme Silme)"
+      ]
+    },
+    {
+      "name": "Estetik Dermatoloji",
+      "subcategories": [
+        "Akne Tedavisi (ilaçlar, lazer tedavileri, kimyasal peelingler vb.)",
+        "Leke Tedavileri (lazer tedavileri, kimyasal peelingler, kriyoterapi vb.)",
+        "Cilt Sıkılaştırma (lazerler, radyofrekans, ultrason vb.)",
+        "Yaşlanma Karşıtı Tedaviler (PRP, mezoterapi, botoks, dolgu uygulamaları vb.)",
+        "Cilt Yenileme ve Gençleştirme (lazerler, mikro iğneleme, PRP vb.)",
+        "Akne Izı Tedavisi (lazer tedavileri, mikro iğneleme, kimyasal peelingler vb.)",
+        "Çatlak Tedavisi (lazer tedavileri, mezoterapi, dermaroller vb.)",
+        "Gözaltı Morlukları Tedavisi (lazer tedavileri, mezoterapi vb.)",
+        "Dudak Dolgusu",
+        "Çene Hattı Kontürü (botoks, dolgu uygulamaları vb.)",
+        "Yüz ve Dudak Bölgesinde Dolgu Uygulamaları",
+        "Botoks Uygulamaları",
+        "Saç PRP Tedavisi",
+        "Cilt PRP Tedavisi"
+      ]
+    },
+    {
+      "name": "Lazer Tedavileri",
+      "subcategories": [
+        "Lazer Epilasyon",
+        "Lazerle Cilt Yenileme",
+        "Lazerle Leke Tedavisi",
+        "Lazerle Kılcal Damar Tedavisi",
+        "Lazerle Akne Tedavisi",
+        "Lazerle Çatlak Tedavisi",
+        "Lazerle Yara İzi Tedavisi",
+        "Lazerle Dövme Silme",
+        "Lazerle Cilt Sıkılaştırma",
+        "Lazerle Ben Tedavisi"
+      ]
+    }
+  ]
+  
