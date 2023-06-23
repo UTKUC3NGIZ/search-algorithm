@@ -1,26 +1,34 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import json from "./data/data.json";
 
 function App() {
-  const [data, setData] = useState(json);
+  const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
+  const [filteredData, setFilteredData] = useState([]);
 
-  // const mergeData = [];
+  useEffect(() => {
+    const mergeData = [];
+    let idCounter = 0;
+    for (const key in json) {
+      for (const item in json[key].subcategories) {
+        mergeData.push({
+          id: idCounter,
+          name: json[key].subcategories[item],
+          point: 0,
+        });
+        idCounter++;
+      }
+    }
+    setData(mergeData);
+    setFilteredData(mergeData);
+  }, []);
 
-  for (const key in data) {
-    const filter = data[key].subcategories.filter((deneme) =>
-      deneme.toLowerCase().includes(search.toLowerCase())
+  useEffect(() => {
+    // 
+    const filtered = data.filter((item) => item.name.toLowerCase().includes(search.toLowerCase())
     );
-    console.log(filter);
-    // for (const item in data[key].subcategories) {
-    //   mergeData.push(data[key].subcategories[item]);
-    // }
-  }
-  // console.log(typeof mergeData)
-  //   const filteredData = data.filter((item) =>
-  //   item.toLowerCase().includes(search.toLowerCase())
-  // );
-  // console.log(filteredData)
+    setFilteredData(filtered);
+  }, [data, search]);
   return (
     <div>
       <input
@@ -28,13 +36,9 @@ function App() {
         onChange={(e) => setSearch(e.target.value)}
         value={search}
       />
-      {data.map((item, index) => (
-        <div key={index}>
-          {item.subcategories.map((deneme, index) => (
-            <li key={index}>
-              {item.name} -{deneme}
-            </li>
-          ))}
+      {filteredData.map((item) => (
+        <div key={item.id}>
+          {item.name} - {item.point}
         </div>
       ))}
     </div>
