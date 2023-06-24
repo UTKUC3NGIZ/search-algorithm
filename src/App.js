@@ -5,8 +5,6 @@ function App() {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
   const [filteredData, setFilteredData] = useState([]);
-  const [kelime, setKelime] = useState([]);
-
   useEffect(() => {
     const mergeData = [];
     let idCounter = 0;
@@ -23,10 +21,10 @@ function App() {
     setData(mergeData);
     setFilteredData(mergeData);
   }, []);
+  console.log(data)
 
   useEffect(() => {
-    setKelime(search.toLowerCase().split(/\b/));
-    let deneme = [];
+    let dataAyirma = [];
     for (const key in data) {
       let modifiedWord = data[key].name.toLowerCase().replace(/ö/g, "o");
       modifiedWord = modifiedWord.replace(/ı/g, "i");
@@ -34,22 +32,27 @@ function App() {
       modifiedWord = modifiedWord.replace(/ü/g, "u");
       modifiedWord = modifiedWord.replace(/ç/g, "c");
       modifiedWord = modifiedWord.replace(/ş/g, "s");
-      deneme.push(modifiedWord);
+      dataAyirma.push(modifiedWord);
     }
-    // console.log(deneme);
 
-    for (const key in deneme) {
-      const dataFilter = deneme[key].split(/\s+|\p{P}/u);
-      const dataFilterNew = dataFilter.filter(
-        (element) =>
-        element !== ""
-      );
-      console.log(dataFilterNew)
-      const filter = dataFilter.filter((element) => kelime.includes(element));
-      setData(filter);
+    let searchAyirma = search.toLowerCase().replace(/ö/g, "o");
+    searchAyirma = searchAyirma.replace(/ı/g, "i");
+    searchAyirma = searchAyirma.replace(/ğ/g, "g");
+    searchAyirma = searchAyirma.replace(/ü/g, "u");
+    searchAyirma = searchAyirma.replace(/ç/g, "c");
+    searchAyirma = searchAyirma.replace(/ş/g, "s");
+    let yeniSearch = searchAyirma.split(/\b/);
+
+    let deneme = [];
+    for (const key in dataAyirma) {
+      const dataFilter = dataAyirma[key].split(/\s+|\p{P}/u);
+      const dataFilterNew = dataFilter.filter((element) => element !== "");
+
+
+      deneme.push(dataFilterNew);
     }
+
   }, [data, search]);
-
   return (
     <div>
       <input
