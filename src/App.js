@@ -66,17 +66,20 @@ function App() {
       }
     });
 
-  const counts = [];
-
+  // kelime uyumu
   dataFilter.forEach((array) => {
-    let count = 0;
     array.name.forEach((word) => {
       if (modifiedSearch.includes(word)) {
-        count++;
         dataFilter[array.id].score += 100;
       }
+      // harf uyumu
+      for (let i = 0; i < word.length; i++) {
+        const character = word[i];
+        if (modifiedSearch.includes(character)) {
+          dataFilter[array.id].score += 10;
+        }
+      }
     });
-    counts.push(count);
   });
   console.log(dataFilter);
   return (
