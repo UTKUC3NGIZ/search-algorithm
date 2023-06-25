@@ -70,17 +70,25 @@ function App() {
     data[array.id].score = 0;
     array.name.forEach((word) => {
       // kelime uyumu
-      if (modifiedSearch.includes(word)) {
-        data[array.id].score += 100;
-      }
-      // harf uyumu
-      // for (let i = 0; i < word.length; i++) {
-      //   const character = word[i];
-      //   if (modifiedSearch.includes(character)) {
-      //     data[array.id].score += 10;
-      //   }
+      // if (modifiedSearch.includes(word)) {
+      //   data[array.id].score += 1000;
       // }
 
+      // harf uyumu
+      
+      for (let i = 0; i < modifiedSearch.length; i++) {
+        const character = modifiedSearch[i];
+        for (let j = 0; j < word.length; j++) {
+          if (word[j].includes(character)) {
+            data[array.id].score += 10;
+          }
+        }
+      }
+      
+      
+
+
+      // sıralama uyumu
       // for (let i = 0; i < modifiedSearch.length; i++) {
       //   if (modifiedSearch[i] === word[i]) {
       //     data[array.id].score += 20;
@@ -88,7 +96,7 @@ function App() {
       // }
     });
   });
-  const sortedData = data.sort((a, b) => b.score - a.score);
+  const sortedData = data
   console.log(sortedData);
   return (
     <div>
