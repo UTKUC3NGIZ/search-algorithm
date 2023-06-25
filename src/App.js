@@ -18,6 +18,7 @@ function App() {
       }
     }
     setData(mergeData);
+
   }, []);
 
   let dataFilter = [];
@@ -66,9 +67,9 @@ function App() {
       }
     });
 
-  // kelime uyumu
   dataFilter.forEach((array) => {
     array.name.forEach((word) => {
+      // kelime uyumu
       if (modifiedSearch.includes(word)) {
         dataFilter[array.id].score += 100;
       }
@@ -79,9 +80,15 @@ function App() {
           dataFilter[array.id].score += 10;
         }
       }
+
+      for (let i = 0; i < modifiedSearch.length; i++) {
+        if (modifiedSearch[i] === word[i]) {
+          dataFilter[array.id].score += 20;
+        }
+      }
     });
   });
-  console.log(dataFilter);
+  const sortedData = dataFilter.sort((a, b) => b.score - a.score);
   return (
     <div>
       <input
@@ -89,6 +96,9 @@ function App() {
         onChange={(e) => setSearch(e.target.value)}
         value={search}
       />
+      {sortedData.map((item) =>(
+        <div>{item.name}</div>
+      ))}
     </div>
   );
 }
