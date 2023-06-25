@@ -65,20 +65,45 @@ function App() {
           return match;
       }
     });
+  // kelime eşleşmesi
   let splitModifiedSearch = modifiedSearch.split(" ");
   for (const key in dataFilter) {
     data[key].score = 0;
-    for (let i = 0; i < splitModifiedSearch.length; i++) {
-      if (
-        dataFilter[key].name.some((element) =>
-          splitModifiedSearch[i].includes(element)
-        )
-      ) {
-        data[key].score += 1000;
-      }
-    }
-  }
+    // for (let i = 0; i < splitModifiedSearch.length; i++) {
+    //   if (
+    //     dataFilter[key].name.some((element) =>
+    //       splitModifiedSearch[i].includes(element)
+    //     )
+    //   ) {
+    //     data[key].score += 1000;
+    //   }
+    // }
 
+    // harf uyumu
+
+    // let dataSplit = dataFilter[key].name;
+
+    // for (const searchItem of modifiedSearch) {
+    //   for (const item of dataSplit) {
+    //     if (item.split("").filter((word) => word === searchItem)) {
+    //       data[key].score += 10;
+    //     }
+    //   }
+    // }
+
+    // sıralama uyumu
+    // for (const item of dataSplit) {
+
+    //   for (const search of modifiedSearch.split(" ")) {
+    //     const maxLength = Math.max(search.length, item.length);
+    //     for (let i = 0; i < maxLength; i++) {
+    //       if (search[i] === item[i]) {
+    //         data[key].score += 10;
+    //       }
+    //     }
+    //   }
+    // }
+  }
   console.log(data);
   return (
     <div>
