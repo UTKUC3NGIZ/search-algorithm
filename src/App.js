@@ -13,14 +13,13 @@ function App() {
         mergeData.push({
           id: idCounter,
           name: json[key].subcategories[item],
+          score: 0,
         });
         idCounter++;
       }
     }
     setData(mergeData);
-
   }, []);
-
   let dataFilter = [];
   for (const item of data) {
     const modifiedText = item.name
@@ -68,27 +67,29 @@ function App() {
     });
 
   dataFilter.forEach((array) => {
+    data[array.id].score = 0;
     array.name.forEach((word) => {
       // kelime uyumu
       if (modifiedSearch.includes(word)) {
-        dataFilter[array.id].score += 100;
+        data[array.id].score += 100;
       }
       // harf uyumu
-      for (let i = 0; i < word.length; i++) {
-        const character = word[i];
-        if (modifiedSearch.includes(character)) {
-          dataFilter[array.id].score += 10;
-        }
-      }
+      // for (let i = 0; i < word.length; i++) {
+      //   const character = word[i];
+      //   if (modifiedSearch.includes(character)) {
+      //     data[array.id].score += 10;
+      //   }
+      // }
 
-      for (let i = 0; i < modifiedSearch.length; i++) {
-        if (modifiedSearch[i] === word[i]) {
-          dataFilter[array.id].score += 20;
-        }
-      }
+      // for (let i = 0; i < modifiedSearch.length; i++) {
+      //   if (modifiedSearch[i] === word[i]) {
+      //     data[array.id].score += 20;
+      //   }
+      // }
     });
   });
-  const sortedData = dataFilter.sort((a, b) => b.score - a.score);
+  const sortedData = data.sort((a, b) => b.score - a.score);
+  console.log(sortedData);
   return (
     <div>
       <input
@@ -96,8 +97,8 @@ function App() {
         onChange={(e) => setSearch(e.target.value)}
         value={search}
       />
-      {sortedData.map((item) =>(
-        <div>{item.name}</div>
+      {sortedData.map((item) => (
+        <div key={item.id}>{item.name}</div>
       ))}
     </div>
   );
