@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import json from "./data/data.json";
+import { BsSearch } from "react-icons/bs";
 
 function App() {
   const [data, setData] = useState([]);
@@ -93,7 +94,6 @@ function App() {
 
     // sıralama uyumu
     for (const item of dataSplit) {
-
       for (const search of modifiedSearch.split(" ")) {
         const maxLength = Math.max(search.length, item.length);
         for (let i = 0; i < maxLength; i++) {
@@ -105,18 +105,29 @@ function App() {
     }
   }
   const sortedData = data.sort((a, b) => b.score - a.score);
-  console.log(data)
   return (
-    <div>
-      <input
-        type="search"
-        onChange={(e) => setSearch(e.target.value)}
-        value={search}
-         className="bg-black"
-      />
-      {sortedData.map((item) => (
-        <div key={item.id}>{item.name}</div>
-      ))}
+    <div className="bg-slate-300">
+      <div className="w-4/5 m-auto pt-14">
+        <div className="relative flex justify-end items-center">
+          <input
+            type="text"
+            onChange={(e) => setSearch(e.target.value)}
+            value={search}
+            className="w-full px-5 py-8 border-2 border-white rounded-xl outline-none md:text-2xl text-xl text-black font-bold"
+            placeholder="Estetik Rinoplasti"
+          />
+          <BsSearch className="absolute text-3xl mr-5" />
+        </div>
+        <div className="mt-8 flex flex-col">
+          {sortedData.map((item) => (
+            <div key={item.id}>
+              <h3 className="px-4 py-8 md:text-xl text-lg border-2 border-white mx-2 my-2 text-center md:text-left  text-black bg-white font-bold">
+                {item.name}
+              </h3>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
