@@ -65,39 +65,21 @@ function App() {
           return match;
       }
     });
-
-  dataFilter.forEach((array) => {
-    data[array.id].score = 0;
-    array.name.forEach((word) => {
-      // kelime uyumu
-      // if (modifiedSearch.includes(word)) {
-      //   data[array.id].score += 1000;
-      // }
-
-      // harf uyumu
-      
-      for (let i = 0; i < modifiedSearch.length; i++) {
-        const character = modifiedSearch[i];
-        for (let j = 0; j < word.length; j++) {
-          if (word[j].includes(character)) {
-            data[array.id].score += 10;
-          }
-        }
+  let splitModifiedSearch = modifiedSearch.split(" ");
+  for (const key in dataFilter) {
+    data[key].score = 0;
+    for (let i = 0; i < splitModifiedSearch.length; i++) {
+      if (
+        dataFilter[key].name.some((element) =>
+          splitModifiedSearch[i].includes(element)
+        )
+      ) {
+        data[key].score += 1000;
       }
-      
-      
+    }
+  }
 
-
-      // sıralama uyumu
-      // for (let i = 0; i < modifiedSearch.length; i++) {
-      //   if (modifiedSearch[i] === word[i]) {
-      //     data[array.id].score += 20;
-      //   }
-      // }
-    });
-  });
-  const sortedData = data
-  console.log(sortedData);
+  console.log(data);
   return (
     <div>
       <input
@@ -105,9 +87,9 @@ function App() {
         onChange={(e) => setSearch(e.target.value)}
         value={search}
       />
-      {sortedData.map((item) => (
+      {/* {sortedData.map((item) => (
         <div key={item.id}>{item.name}</div>
-      ))}
+      ))} */}
     </div>
   );
 }
