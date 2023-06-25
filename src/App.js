@@ -69,52 +69,54 @@ function App() {
   let splitModifiedSearch = modifiedSearch.split(" ");
   for (const key in dataFilter) {
     data[key].score = 0;
-    // for (let i = 0; i < splitModifiedSearch.length; i++) {
-    //   if (
-    //     dataFilter[key].name.some((element) =>
-    //       splitModifiedSearch[i].includes(element)
-    //     )
-    //   ) {
-    //     data[key].score += 1000;
-    //   }
-    // }
+    for (let i = 0; i < splitModifiedSearch.length; i++) {
+      if (
+        dataFilter[key].name.some((element) =>
+          splitModifiedSearch[i].includes(element)
+        )
+      ) {
+        data[key].score += 1000;
+      }
+    }
 
     // harf uyumu
 
-    // let dataSplit = dataFilter[key].name;
+    let dataSplit = dataFilter[key].name;
 
-    // for (const searchItem of modifiedSearch) {
-    //   for (const item of dataSplit) {
-    //     if (item.split("").filter((word) => word === searchItem)) {
-    //       data[key].score += 10;
-    //     }
-    //   }
-    // }
+    for (const searchItem of modifiedSearch) {
+      for (const item of dataSplit) {
+        if (item.split("").filter((word) => word === searchItem)) {
+          data[key].score += 10;
+        }
+      }
+    }
 
     // sıralama uyumu
-    // for (const item of dataSplit) {
+    for (const item of dataSplit) {
 
-    //   for (const search of modifiedSearch.split(" ")) {
-    //     const maxLength = Math.max(search.length, item.length);
-    //     for (let i = 0; i < maxLength; i++) {
-    //       if (search[i] === item[i]) {
-    //         data[key].score += 10;
-    //       }
-    //     }
-    //   }
-    // }
+      for (const search of modifiedSearch.split(" ")) {
+        const maxLength = Math.max(search.length, item.length);
+        for (let i = 0; i < maxLength; i++) {
+          if (search[i] === item[i]) {
+            data[key].score += 500;
+          }
+        }
+      }
+    }
   }
-  console.log(data);
+  const sortedData = data.sort((a, b) => b.score - a.score);
+  console.log(data)
   return (
     <div>
       <input
         type="search"
         onChange={(e) => setSearch(e.target.value)}
         value={search}
+         className="bg-black"
       />
-      {/* {sortedData.map((item) => (
+      {sortedData.map((item) => (
         <div key={item.id}>{item.name}</div>
-      ))} */}
+      ))}
     </div>
   );
 }
