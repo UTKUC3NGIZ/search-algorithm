@@ -2,7 +2,7 @@
 
 <p align="center"><img src="https://socialify.git.ci/UTKUC3NGIZ/search-algorithm/image?font=KoHo&language=1&name=1&owner=1&pattern=Solid&theme=Dark" alt="project-image"></p>
 
-<p id="description">React ve Tailwind ile NFT Pazar Yeri</p>
+<p id="description">Aranılan kelimeyle ilgili en yakın sonuçları çıkartan arama algoritmasını fake data ile oluşturdum</p>
 
 <h2>🚀 Demo</h2>
 
